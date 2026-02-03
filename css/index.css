@@ -1,0 +1,196 @@
+/* Definição de Variáveis de Cores */
+:root {
+    --bg-body: linear-gradient(268deg, rgba(246, 233, 107, 1) 30%, rgba(190, 220, 116, 1) 53%);
+    --bg-card: #ffffff;
+    --text-title: #1a1a1a;
+    --text-body: #4b4b4b;
+    --text-strong: #d35400;
+    --bg-item-list: #f8f9fa;
+    --border-card: #e1e8ed;
+    --shadow-card: rgba(0, 0, 0, 0.05);
+    --badge-bg: #f0f2f5;
+    --badge-text: #576574;
+}
+
+/* Sobrescrita para o Tema Escuro */
+[data-theme="dark"] {
+    --bg-body: #0f0f0f;
+    --bg-card: #1e1e1e;
+    --text-title: #ffffff;
+    --text-body: #b0b0b0;
+    --text-strong: #ffca28;
+    --bg-item-list: #2d2d2d;
+    --border-card: #333333;
+    --shadow-card: rgba(0, 0, 0, 0.4);
+    --badge-bg: #333333;
+    --badge-text: #ffca28;
+}
+
+/* Configurações Gerais */
+body {
+    background: var(--bg-body);
+    margin: 0;
+    padding: 0;
+    transition: background 0.4s ease;
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+
+.theme-switch {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 60px 120px; 
+    margin-bottom: 10px;
+}
+
+#toggle-theme {
+    cursor: pointer;
+
+    padding: 18px 35px; 
+    font-size: 1.2rem;
+    
+
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 12px; 
+    border: 3px solid var(--text-title);
+    
+
+    background: #ffca28;
+    color: #1a1a1a;
+    box-shadow: 8px 8px 0px var(--text-title); 
+    
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+#toggle-theme:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 12px 12px 0px var(--text-title);
+}
+
+#toggle-theme:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px var(--text-title);
+}
+
+/* Container Principal */
+.info-projeto {
+    max-width: 1400px; 
+    margin: 50px auto;
+    padding: 40px;
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid var(--border-card);
+    box-shadow: 0 15px 35px var(--shadow-card);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: var(--text-title);
+    transition: all 0.4s ease;
+}
+
+/* Badges */
+.card-badges {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+}
+
+/* Título */
+.info-projeto h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: var(--text-title);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+/* Jogo (Canvas/Container) */
+[wm-flappy] {
+    margin: 30px 0;
+    border: 5px solid var(--text-title);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Texto de Introdução */
+.info-projeto p {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: 35px;
+}
+
+.info-projeto strong {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+/* Seção de Tópicos */
+.detalhes-tecnicos h3 {
+    font-size: 1.7rem;
+    color: var(--text-title);
+    margin-bottom: 25px;
+}
+
+.detalhes-tecnicos ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .detalhes-tecnicos ul { grid-template-columns: 1fr; }
+}
+
+.detalhes-tecnicos li {
+    font-size: 1.1rem;
+    padding: 25px;
+    background: var(--bg-item-list);
+    border-radius: 16px;
+    border-left: 8px solid #ffca28;
+    transition: all 0.3s ease;
+}
+
+.detalhes-tecnicos li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-card);
+}
+
+.detalhes-tecnicos li strong {
+    color: var(--text-title);
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+/* Rodapé */
+.creditos {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 2px solid var(--border-card);
+    font-size: 1.1rem;
+    color: #a4b0be;
+    text-align: center;
+}
+
