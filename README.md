@@ -34,7 +34,7 @@ Durante o desenvolvimento deste desafio, foram exercitados os seguintes pilares:
 ## 🎮 Como Jogar
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone https://github.com/FelipeS0uz4/Flappy-Bird.git
     ```
 2.  **Abra o arquivo `index.html`** no seu navegador de preferência.
 3.  **Comandos:** Pressione qualquer tecla para fazer o pássaro subir e ganhar pontos ao atravessar as barreiras!
